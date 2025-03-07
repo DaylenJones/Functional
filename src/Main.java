@@ -7,17 +7,17 @@ interface GCDCalculator {
 
 public class CustomGCD {
     public static void main(String[] args) {
-        // Lambda expression to compute GCD
+
         GCDCalculator gcd = (a, b) -> {
             while (b != 0) {
                 int temp = b;
                 b = a % b;
                 a = temp;
             }
-            return Math.abs(a); // Ensure non-negative GCD
+            return Math.abs(a);
         };
 
-        // Test cases
+
         int num1 = 56, num2 = 98;
         System.out.println("GCD of " + num1 + " and " + num2 + " is: " + gcd.compute(num1, num2));
 
